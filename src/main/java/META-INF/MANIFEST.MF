@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Class-Path: commons-codec-1.4.jar netty-3.7.0.Final.jar javapoet-1.8.0
+ .jar bugu-mongo-fs-2.9.0.jar motan-transport-netty-0.3.1.jar jline-0.
+ 9.94.jar mongo-java-driver-2.14.3.jar netty-3.2.5.Final.jar log4j-1.2
+ .14.jar slf4j-api-1.5.8.jar motan-springsupport-0.3.1.jar hessian-4.0
+ .38.jar zookeeper-3.4.8.jar slf4j-log4j12-1.5.8.jar commons-pool-1.6.
+ jar commons-lang3-3.1.jar motan-core-0.3.1.jar fastjson-1.1.30.jar bu
+ gu-mongo-core-2.9.0.jar log4j-api-2.7.jar motan-registry-zookeeper-0.
+ 3.1.jar guava-18.0.jar zkclient-0.3.jar metrics-core-3.0.1.jar log4j-
+ core-2.7.jar
+Main-Class: com.bugull.farm.web.init.App
+
