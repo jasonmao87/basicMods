@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/hello")
 public class Hello {
-    @MotanReferer(basicReferer = "motantestClientBasicConfig" ,registry = "zookeeper")
+    @MotanReferer  //(basicReferer = "motantestClientBasicConfig" ,registry = "registry")
     Api api ;
     @RequestMapping("")
     public String hello(){

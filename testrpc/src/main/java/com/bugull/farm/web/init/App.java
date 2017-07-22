@@ -62,7 +62,7 @@ public class App {
      * 配置 RegistryConfig
      * @return
      */
-    @Bean(name = "registryConfig1")
+    @Bean(name = "registry")
     public RegistryConfigBean registryConfig() {
         RegistryConfigBean config = new RegistryConfigBean();
         // 本地配置
@@ -71,8 +71,8 @@ public class App {
         */
         // zookeeper 配置
         config.setRegProtocol("zookeeper");
-        //config.setAddress("121.40.115.131:2181,120.26.109.144:2181");
-        config.setAddress("127.0.0.1:2181");
+        config.setAddress("121.40.115.131:2181,120.26.109.144:2181");
+        //config.setAddress("127.0.0.1:2181");
         //config.setPort(2181);
         config.setName("zookeeper");
         return config;
@@ -86,12 +86,12 @@ public class App {
     public BasicServiceConfigBean baseServiceConfig() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
         config.setExport("8002");
-        config.setGroup("default_rpc");
+        config.setGroup("testRPC");
         config.setAccessLog(false);
         config.setShareChannel(true);
         config.setModule("testRPC");
         config.setApplication("testRPC");
-        config.setRegistry("registryConfig1");
+        config.setRegistry("registry");
         config.setThrowException(false);
         return config;
     }

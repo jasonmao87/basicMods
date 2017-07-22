@@ -25,28 +25,49 @@
 
     </properties>
 
+    <!--
 
     <repositories>
         <repository>
             <id>nexus</id>
             <name>Team Nexus Repository</name>
-            <url>http://maven.yunext.com/nexus/content/groups/public</url>
+            <url>http://maven.yunext.com:10000/nexus/content/groups/public</url>
         </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>nexus</id>
             <name>Team Nexus Repository</name>
-            <url>http://maven.yunext.com/nexus/content/groups/public</url>
+            <url>http://maven.yunext.com:10000/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+    -->
+
+
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>Team Nexus Repository</name>
+            <url>http://114.55.5.9:10000/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>nexus</id>
+            <name>Team Nexus Repository</name>
+            <url>http://114.55.5.9:10000/nexus/content/groups/public</url>
         </pluginRepository>
     </pluginRepositories>
 
+
     <dependencies>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -60,18 +81,18 @@
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-core</artifactId>
-            <version>RELEASE</version>
+            <version>0.3.1</version>
         </dependency>
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-transport-netty</artifactId>
-            <version>RELEASE</version>
+            <version>0.3.1</version>
         </dependency>
         <!-- only needed for spring-based features -->
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-springsupport</artifactId>
-            <version>RELEASE</version>
+            <version>0.3.1</version>
         </dependency>
 
          <!--
@@ -89,15 +110,16 @@
             <version>${mongo.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.bugull</groupId>
-            <artifactId>bugu-mongo-fs</artifactId>
-            <version>${bugu.mongo.version}</version>
-        </dependency>
 
         <dependency>
             <groupId>com.bugull</groupId>
             <artifactId>bugu-mongo-core</artifactId>
+            <version>${bugu.mongo.version}</version>
+
+        </dependency>
+        <dependency>
+            <groupId>com.bugull</groupId>
+            <artifactId>bugu-mongo-fs</artifactId>
             <version>${bugu.mongo.version}</version>
         </dependency>
 

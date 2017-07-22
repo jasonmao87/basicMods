@@ -35,7 +35,7 @@ public class AppInit extends SpringBootServletInitializer{
 
 
 
-    @Bean(name = "motanProtocol")
+    @Bean(name = "motan")
     public ProtocolConfigBean protocolConfig1() {
         ProtocolConfigBean config = new ProtocolConfigBean();
         config.setDefault(true);
@@ -46,7 +46,7 @@ public class AppInit extends SpringBootServletInitializer{
         return config;
     }
 
-    @Bean(name = "zookeeper")
+    @Bean(name = "registry")
     public RegistryConfigBean registryConfig() {
         RegistryConfigBean config = new RegistryConfigBean();
         // 本地配置
@@ -55,8 +55,8 @@ public class AppInit extends SpringBootServletInitializer{
         */
         // zookeeper 配置
         config.setRegProtocol("zookeeper");
-        //config.setAddress("121.40.115.131:2181,120.26.109.144:2181");
-        config.setAddress("127.0.0.1:2181");
+        config.setAddress("121.40.115.131:2181,120.26.109.144:2181");
+        //config.setAddress("127.0.0.1:2181");
         //config.setPort(2181);
         config.setName("zookeeper");
         System.out.println("配置 zookeeper");
@@ -67,11 +67,11 @@ public class AppInit extends SpringBootServletInitializer{
     @Bean(name = "motantestClientBasicConfig")
     public BasicRefererConfigBean baseRefererConfig() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-        config.setProtocol("motanProtocol");
-        config.setGroup("default_rpc");
+        config.setProtocol("motan");
+        config.setGroup("testRPC");
         config.setModule("testRPC");
         config.setApplication("testRPC");
-        config.setRegistry("zookeeper");
+        config.setRegistry("registry");
         config.setCheck(false);
         config.setAccessLog(true);
         config.setRetries(2);
